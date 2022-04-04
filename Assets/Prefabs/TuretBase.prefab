@@ -27,9 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3229168573321813109}
   m_LocalRotation: {x: 0.7021947, y: -0, z: -0, w: 0.711985}
-  m_LocalPosition: {x: 0.033, y: 0.013, z: 0.378}
-  m_LocalScale: {x: 0.4687172, y: 0.46871722, z: 0.46871722}
-  m_Children: []
+  m_LocalPosition: {x: 0.032999992, y: 0.006, z: 0.929}
+  m_LocalScale: {x: 0.4687172, y: 0.46871728, z: 0.46871728}
+  m_Children:
+  - {fileID: 5941176347763006602}
   m_Father: {fileID: 3229168573416237844}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 89.207, y: 0, z: 0}
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a33e2d66014819b49b23926f41d59f73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,6 +109,7 @@ GameObject:
   - component: {fileID: 3229168573416237851}
   - component: {fileID: 3229168573416237850}
   - component: {fileID: 3229168573416237849}
+  - component: {fileID: 7289150792651781426}
   m_Layer: 0
   m_Name: TuretBase
   m_TagString: Untagged
@@ -157,7 +159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cece59efcb8fc924298566c2344e3fe1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,3 +194,65 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7289150792651781426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229168573416237848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea68aeb22889344fa059ffd2e18ec80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gun: {fileID: 1860136160772051891}
+  _bulletCoolDown: 0
+  _ammo: 0
+  _infiniteAmmo: 1
+--- !u!1 &9012011551727805159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941176347763006602}
+  - component: {fileID: 1860136160772051891}
+  m_Layer: 0
+  m_Name: ProjectileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941176347763006602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012011551727805159}
+  m_LocalRotation: {x: -0.7021947, y: -0, z: -0, w: 0.711985}
+  m_LocalPosition: {x: -0.07040491, y: 0.1, z: 0.01}
+  m_LocalScale: {x: 2.1334827, y: 2.1334822, z: 2.1334822}
+  m_Children: []
+  m_Father: {fileID: 3229168573321813110}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860136160772051891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012011551727805159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc38f21ebd86c647beb2160e2bb3a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletRef: {fileID: 939063421543184370, guid: 3eff97d991f3d9b48a07318909e68fc6, type: 3}
+  _bulletForce: 1
+  _owner: {fileID: 0}
